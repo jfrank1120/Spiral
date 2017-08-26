@@ -57,7 +57,15 @@ public class SpiralViewer extends JFrame {
         SPIRAL.setPreferredSize(new Dimension(800, 400));
         setPanels();
     }
-
+    /**
+     * Method that takes in the R,G, and B values of a color and then returns the
+     * the current color is string form
+     */
+    private String colorReturnColor(int R, int G, int B) {
+        String currentColor = "black";
+        
+        return currentColor;
+    }
     /**
      * Creates the options menu along with its menuitems
      */
@@ -78,7 +86,7 @@ public class SpiralViewer extends JFrame {
                 -> JOptionPane.showMessageDialog(this, "Not supported yet.")
         );
         items[2].addActionListener(e
-                -> JOptionPane.showMessageDialog(this, "Not supported yet.")
+                -> JOptionPane.showMessageDialog(this, "Current color = ")
         );
         return menu;
     }
@@ -135,7 +143,6 @@ public class SpiralViewer extends JFrame {
     private void setPanels() {
         add(SPIRAL, BorderLayout.CENTER);
         add(controlPanel(sliderPanel(), middlePanel(), bottomPanel()), BorderLayout.WEST);
-        //add(getMenu());
     }
 
     /**
@@ -285,6 +292,6 @@ public class SpiralViewer extends JFrame {
         viewer.setTitle("Spiraling Out Of Control");
         viewer.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         viewer.setVisible(true);
-        viewer.setSize(900, 500);
+        viewer.setSize(1100, 700);
     }
 }
